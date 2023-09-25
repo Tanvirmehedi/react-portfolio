@@ -1,0 +1,259 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="lg:px-10">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id="root"></div>
+    <script type="text/babel">
+      const { Route, Link, HashRouter } = ReactRouterDOM;
+      function MyApp() {
+        return (
+          <div>
+            <main className="portfolio-main mx-auto bg-[#F2F5F9] flex flex-col gap-4 font-[railway]  lg:min-h-screen lg:grid lg:grid-cols-5 lg:gap-1 lg:content-start ">
+              <ProfileDetails />
+              <AboutSection />
+            </main>
+          </div>
+        );
+      }
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(
+        <HashRouter>
+          <MyApp />
+        </HashRouter>
+      );
+
+      function ProfileDetails() {
+        return (
+          <section className="profileDetails bg-white rounded-md p-3 lg:px-16 m-auto w-full text-center lg:col-span-2 mt-16 lg:mt-24">
+            <NameCard />
+            <InfoCard />
+          </section>
+        );
+      }
+
+      function AboutSection() {
+        return (
+          <section className="about rounded-md p-3 w-full text-center lg:col-span-3 lg:m-0 flex flex-col">
+            <Navbar />
+            <ShareBox />
+          </section>
+        );
+      }
+      function NameCard() {
+        return (
+          <div className="name-card flex flex-col justify-center items-center gap-2">
+            <div className="profile-image rounded-lg w-32 h-32 overflow-hidden -mt-16 lg:-mt-24">
+              <img
+                className="max-h-fit"
+                src="https://i.ibb.co/xz7GpN4/IMG-20210116-WA002fgggggggggggggggggggggggggg6-png.jpg"
+                alt="profile-img"
+              />
+            </div>
+            <div className="profile-name text-2xl font-semibold">
+              H M Tanvir Mehedi
+            </div>
+            <div className="profile-designation font-thin text-sm text-gray-400">
+              FullStack Developer
+            </div>
+          </div>
+        );
+      }
+
+      function InfoCard() {
+        const infoDetailsData = [
+          {
+            infoName: "Phone",
+            infoData: "+8801715422885",
+            icon: (
+              <i className="fa-solid fa-mobile-screen-button text-[#1BBAD6]"></i>
+            ),
+          },
+          {
+            infoName: "Email",
+            infoData: "dev1tanvir@gmail.com",
+            icon: <i className="fa-solid fa-envelope text-[#FF9C1B]"></i>,
+          },
+          {
+            infoName: "Location",
+            infoData: "Dhaka, Bangladesh",
+            icon: <i className="fa-solid fa-location-dot text-[#1BBAD6]"></i>,
+          },
+        ];
+
+        return (
+          <div className="info-card bg-[#F2F5F9] rounded-md mt-7 px-10 py-6">
+            {infoDetailsData.map((item, index) => (
+              <InfoDetails
+                key={index}
+                infoName={item.infoName}
+                infoData={item.infoData}
+                icon={item.icon}
+              />
+            ))}
+            <Button
+              href={
+                "https://drive.google.com/file/d/1yv_knrAdhpCxB6C9kcb7dbgiGk5f17fC/view"
+              }
+              icon={<i className="fa-solid fa-download text-sm "></i>}
+              text={"Download Resume"}
+            />
+          </div>
+        );
+      }
+
+      function InfoDetails({ infoName, infoData, icon }) {
+        return (
+          <div className="phone border-b-2 text-start flex items-center gap-4 py-3">
+            <div className="icon rounded-md">{icon}</div>
+            <div className="phone-text text-sm font-thin">
+              <p className="-mb-1 text-gray-400">{infoName}</p>
+              {infoData}
+            </div>
+          </div>
+        );
+      }
+
+      function Button({ href, icon, text }) {
+        return (
+          <div className="resume mt-6 m-auto flex flex-row justify-center items-center">
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <button className="resume-btn rounded-full cursor-pointer p-3 text-xl flex flex-row gap-x-2 justify-center items-center bg-gradient-to-r from-[#1BBAD6] to-[#FFCE42] text-white">
+                <div className="icon -mt-1">{icon}</div>
+                <div className="btn-text text-sm">{text}</div>
+              </button>
+            </a>
+          </div>
+        );
+      }
+
+      function Navbar() {
+        const navButtonData = [
+          {
+            text: "Home",
+            icon: <i className="fa-solid fa-house text-[#1A1003]/50"></i>,
+            to: "/",
+          },
+          {
+            text: "Resume",
+            icon: <i className="fa-solid fa-file"></i>,
+            to: "/resume",
+          },
+          {
+            text: "Work",
+            icon: <i className="fa-solid fa-briefcase"></i>,
+            to: "work",
+          },
+          {
+            text: "Contact",
+            icon: <i className="fa-solid fa-file-contract"></i>,
+            to: "contact",
+          },
+        ];
+
+        return (
+          <div className="flex justify-evenly lg:justify-end mb-3">
+            <div className="bg-[#F2F7FC] rounded-md border shadow-inner flex flex-wrap justify-between gap-1 lg:gap-1 lg:w-1/2 px-5">
+              {navButtonData.map((item, index) => (
+                <NavButton
+                  key={index}
+                  text={item.text}
+                  icon={item.icon}
+                  to={item.to}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      }
+      function NavButton({ icon, text, to }) {
+        return (
+            <Link
+              to={to}
+              className="w-14 h-14 bg-[#E1E8EF] flex flex-col justify-center items-center cursor-pointer border rounded-md my-2 p-2"
+            >
+              <div className="icon">{icon}</div>
+              <div className="text">{text}</div>
+            </Link>
+        );
+      }
+
+      function ShareBox() {
+        return (
+          <div className="my-3 lg:my-0 bg-white rounded-md h-min py-6 px-3 lg:px-20">
+            <Route path="/" exact component={Home} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/work" component={Work} />
+            <Route path="/contact" component={Contact} />
+          </div>
+        );
+      }
+
+      const Home = () => {
+        return (
+          <>
+            <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-pink-500 relative">
+              About Me
+            </h1>
+            <p className="text-justify py-10">
+              Hello there! I'm thrilled to welcome you to my portfolio. I am a
+              passionate and versatile full-stack developer with a keen interest
+              in exploring the latest cutting-edge technologies. My journey in
+              the world of web development has been nothing short of
+              exhilarating, and I constantly strive to enhance my skills and
+              embrace emerging trends in the industry.
+            </p>
+          </>
+        );
+      };
+
+      const Resume = () => {
+        return (
+          <>
+            <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-pink-500 relative">
+              Resume
+            </h1>
+          </>
+        );
+      };
+
+      const Work = () => {
+        return (
+          <>
+            <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-pink-500 relative">
+              Work
+            </h1>
+          </>
+        );
+      };
+
+      const Contact = () => {
+        return (
+          <>
+            <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-pink-500 relative">
+              Contact
+            </h1>
+          </>
+        );
+      };
+    </script>
+  </body>
+</html>
