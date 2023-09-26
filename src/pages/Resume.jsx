@@ -6,7 +6,7 @@ export const Resume = () => {
   return (
     <>
       <ShareHeader pageTitle={"Resume"} />
-    <h1>We Are building Our Resume</h1>
+      <h1>We Are building Our Resume</h1>
     </>
   );
 };

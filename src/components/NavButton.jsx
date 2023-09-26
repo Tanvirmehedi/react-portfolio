@@ -1,5 +1,6 @@
 /** @format */
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink } from "react-router-dom";
 
 export function NavButton({ icon, text, to }) {
