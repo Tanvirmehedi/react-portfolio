@@ -1,9 +1,10 @@
+import { ShareHeader } from "../components/ShareHeader";
+
 export const Contact = () => {
     return (
       <>
-        <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-pink-500 relative">
-          Contact
-        </h1>
+        <ShareHeader pageTitle={"Contact"}/>
+        <h1>This Thi the content Page What i Build</h1>
       </>
     );
   };

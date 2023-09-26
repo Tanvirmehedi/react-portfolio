@@ -1,6 +1,7 @@
 /** @format */
 
 import { HomeService } from "../components/HomeService";
+import { ShareHeader } from "../components/ShareHeader";
 
 export const Home = () => {
   const servicesData = [
@@ -35,9 +36,7 @@ export const Home = () => {
   ];
   return (
     <>
-      <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-gradient-to-r from-[#FFCE42] to-[#1BBAD6] relative">
-        About Me
-      </h1>
+     <ShareHeader pageTitle={"About Me"}/>
       <p className="text-justify py-5 first-letter:font-bold first-letter:text-lg first-letter:text-black/70">
         Hello there! I'm thrilled to welcome you to my portfolio. I am a
         passionate and versatile full-stack developer with a keen interest in

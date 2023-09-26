@@ -1,9 +1,12 @@
+/** @format */
+
+import { ShareHeader } from "../components/ShareHeader";
+
 export const Resume = () => {
-    return (
-      <>
-        <h1 className="text-start text-2xl font-semibold before:inline-block before:end-10 before:top-3.5 before:absolute before:w-1/3 before:h-0.5 before:bg-pink-500 relative">
-          Resume
-        </h1>
-      </>
-    );
-  };
+  return (
+    <>
+    <h1>We Are Try To build Our Resume</h1>
+      <ShareHeader pageTitle={"Resume"} />
+    </>
+  );
+};
