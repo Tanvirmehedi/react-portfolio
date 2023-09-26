@@ -37,7 +37,7 @@ export const Home = () => {
     },
   ];
   return (
-    <>
+    <div className="transition-all">
      <ShareHeader pageTitle={"About Me"}/>
       <p className="text-justify py-5 first-letter:font-bold first-letter:text-lg first-letter:text-black/70">
         Hello there! I'm thrilled to welcome you to my portfolio. I am a
@@ -52,6 +52,6 @@ export const Home = () => {
       <div className="services-box grid lg:grid-cols-2 gap-3">
         {servicesData.map((item,index)=><HomeService title={item.title} key={index} text={item.text} icon={item.icon} servicesBg={item.bgColor} iconColor={item.iconColor}/>)}
       </div>
-    </>
+    </div>
   );
 };
