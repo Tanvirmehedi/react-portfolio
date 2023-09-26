@@ -23,7 +23,7 @@ export  function InfoCard() {
     ];
 
     return (
-      <div className="info-card bg-[#F2F5F9] rounded-md mt-7 px-10 py-6">
+      <div className="info-card bg-[#F2F5F9] rounded-md my-7 px-10 py-6">
         {infoDetailsData.map((item, index) => (
           <InfoDetails
             key={index}

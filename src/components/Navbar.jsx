@@ -4,7 +4,7 @@ export function Navbar() {
     const navButtonData = [
       {
         text: "Home",
-        icon: <i className="fa-solid fa-house text-[#1A1003]/50"></i>,
+        icon: <i className="fa-solid fa-house"></i>,
         to: "/",
       },
       {
@@ -26,7 +26,7 @@ export function Navbar() {
 
     return (
       <div className="flex justify-evenly lg:justify-end mb-3">
-        <div className="bg-[#F2F7FC] rounded-md border shadow-inner flex flex-wrap justify-between gap-1 lg:gap-1 lg:w-1/2 px-5">
+        <div className="bg-[#F2F7FC] rounded-md border shadow-inner flex flex-wrap justify-evenly gap-2 px-5 lg:gap-1 lg:w-1/2 ">
           {navButtonData.map((item, index) => (
             <NavButton
               key={index}
