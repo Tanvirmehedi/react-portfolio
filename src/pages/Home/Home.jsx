@@ -1,8 +1,8 @@
 /** @format */
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { HomeService } from "../components/HomeService";
-import { ShareHeader } from "../components/ShareHeader";
+import { HomeService } from "./HomeService";
+import { ShareHeader } from "../../components/ShareHeader";
 import { faBlog, faChalkboard, faCode, faServer } from "@fortawesome/free-solid-svg-icons";
 
 export const Home = () => {

@@ -1,10 +1,11 @@
 /** @format */
 
 import { Route, Routes } from "react-router-dom";
-import { Home } from "../pages/Home";
-import { Resume } from "../pages/Resume";
-import { Work } from "../pages/Work";
-import { Contact } from "../pages/Contact";
+import { Home } from "../pages/Home/Home";
+import { Resume } from "../pages/Resume/Resume";
+import { Work } from "../pages/Work/Work";
+import { Contact } from "../pages/Contact/Contact";
+
 
 export function ShareBox() {
   return (

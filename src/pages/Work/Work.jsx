@@ -1,6 +1,6 @@
 /** @format */
 
-import { ShareHeader } from "../components/ShareHeader";
+import { ShareHeader } from "../../components/ShareHeader";
 
 export const Work = () => {
   return (
