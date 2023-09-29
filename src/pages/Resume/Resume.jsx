@@ -3,7 +3,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ShareHeader } from "../../components/ShareHeader";
 import { EducationExperience } from "./EducationExperience";
-import { faGraduationCap, faTrophy } from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faGraduationCap, faNetworkWired, faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { SkillServices } from "./SkillServices";
 
 export const Resume = () => {
@@ -15,15 +15,15 @@ export const Resume = () => {
       ),
       Data: [
         {
-          institution: "Moringa School",
-          duration: "2020-2021",
-          major: "Software Development",
+          institution: "Creative IT Institute",
+          duration: "2018-2019",
+          major: "Diploma in (CMPG)",
           color: "bg-[#FFE3BF]/50",
         },
         {
-          institution: "Masinde Muliro University",
+          institution: "Stamford University Bangladesh",
           duration: "2012-2016",
-          major: "Disaster Management",
+          major: "Bachelor degree",
           color: "bg-[#FFEED9]/50",
         },
       ],
@@ -33,15 +33,15 @@ export const Resume = () => {
       icon: <FontAwesomeIcon className="text-[#f7c142]" icon={faTrophy} />,
       Data: [
         {
-          major: "Website Development",
-          institution: "Moringa School",
-          duration: "2022 - Present",
+          major: "Frontend Developer",
+          institution: "Fresh Home Ltd",
+          duration: "2021 - Present",
           color: "bg-[#FFEED9]/50",
         },
         {
-          major: "Technical Mentor",
-          institution: "Village 2 Nation",
-          duration: "2021-2022",
+          major: "Web Application Maintenance",
+          institution: "GetWay Solution",
+          duration: "2019-2020",
           color: "bg-[#FFE3BF]/50",
         },
       ],
@@ -50,30 +50,23 @@ export const Resume = () => {
   const skills = [
     {
       category: "Work Skills",
-      icon: <FontAwesomeIcon className="text-[#f7c142]" icon={faTrophy} />,
+      icon: <FontAwesomeIcon className="text-[#f7c142]" icon={faNetworkWired} />,
       list: [
+        "Node.js",
+        "Mongo DB",
         "NEXT.js",
         "React.js",
-        "HTML 5",
-        "CSS 3",
         "Tailwind CSS",
         "Figma",
         "JavaScript",
-        "Mongo DB",
-        "SQL",
-        "Angular",
-        "Android",
-        "Git",
+        "Git & GitHub",
       ],
     },
     {
       category: "Soft Skills",
-      icon: <FontAwesomeIcon className="text-[#f7c142]" icon={faTrophy} />,
+      icon: <FontAwesomeIcon className="text-[#f79342]" icon={faBolt} />,
       list: [
         "Time Management",
-        "Mentorship",
-        "Impeccable Communication",
-        "Flexibility",
         "Research",
         "Writing",
       ],

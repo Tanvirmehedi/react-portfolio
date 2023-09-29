@@ -8,9 +8,9 @@ export const SkillServices = ({ data }) => {
         <span className="pr-2">{icon}</span>
         {category}
       </h2>
-      <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-3 gap-2 mt-3 px-2">
+      <div className="grid grid-flow-row-dense grid-cols-2 grid-rows-2 gap-2 mt-3 px-2">
         {list.map((item, index) => (
-          <span className="bg-[#E1E8EF] rounded-md p-1 flex items-center justify-center">{item}</span>
+          <span className="bg-[#E1E8EF] text-slate-700 font-thin rounded-md p-2 flex items-center justify-center shadow-sm shadow-gray-400">{item}</span>
         ))}
       </div>
     </div>
