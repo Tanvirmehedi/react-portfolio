@@ -13,7 +13,7 @@ export const WorkNav = ({ data}) => {
 
   return (
     <>
-      <li onClick={()=>handler(data)}>{data.category}</li>
+      <li className="" onClick={()=>handler(data)}>{data.category}</li>
     </>
   );
 };

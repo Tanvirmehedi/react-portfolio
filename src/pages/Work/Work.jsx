@@ -73,7 +73,8 @@ export const Work = () => {
   return (
     <div className="transition-all">
       <ShareHeader pageTitle={"Portfolio"} />
-      {projectItems.map((item,index)=> <ul key ={index}><WorkNav data={item} /> </ul>)}
+      <ul className="flex flex-row gap-2 justify-evenly my-5" >{projectItems.map((item,index)=> <WorkNav data={item} key ={index} /> )}
+      </ul>
     </div>
   );
 };
