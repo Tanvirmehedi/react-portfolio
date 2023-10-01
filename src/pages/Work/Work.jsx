@@ -1,7 +1,9 @@
 /** @format */
 
+import { Route, Routes } from "react-router-dom";
 import { ShareHeader } from "../../components/ShareHeader";
 import { WorkNav } from "./WorkNav";
+import { useState } from "react";
 
 export const Work = () => {
   const projectItems = [
@@ -69,11 +71,28 @@ export const Work = () => {
       ],
     },
   ];
-  
+  const [isActive, setActive] = useState(null);
+
+  const handler = (index) => {
+    setActive(index);
+  };
   return (
     <div className="transition-all">
       <ShareHeader pageTitle={"Portfolio"} />
-      <ul className="flex flex-row gap-2 justify-evenly my-5" >{projectItems.map((item,index)=> <WorkNav data={item} key ={index} /> )}
+      <ul className="flex flex-col flex-wrap lg:flex-row gap-4 justify-evenly my-5">
+        {projectItems.map((item, index) => (
+          <li
+            onClick={() => handler(index)}
+            key={index}
+            className={
+              isActive === index
+                ? "text-[#FFCE42] font-medium tracking-wide"
+                : "text-[#57657A] text-base font-medium cursor-pointer tracking-wide "
+            }
+          >
+            {item.category}
+          </li>
+        ))}
       </ul>
     </div>
   );
