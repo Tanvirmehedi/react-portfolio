@@ -13,7 +13,7 @@ export const Work = () => {
   const projectItems = [
     {
       category: "App Development",
-      imageLink: blog,
+      imageLink: "https://tanvirmehedi.github.io/react-portfolio-live/main.png",
       projects: [
         {
           title: "Project 1",
@@ -31,7 +31,7 @@ export const Work = () => {
     },
     {
       category: "Web Development",
-      imageLink: app,
+      imageLink: "https://tanvirmehedi.github.io/react-portfolio-live/main2.png",
       projects: [
         {
           title: "Project 3",
@@ -43,7 +43,7 @@ export const Work = () => {
     },
     {
       category: "Design",
-      imageLink: code,
+      imageLink: "https://tanvirmehedi.github.io/react-portfolio-live/main3.png",
       projects: [
         {
           title: "Project 4",
@@ -61,7 +61,7 @@ export const Work = () => {
     },
     {
       category: "Mentorship",
-      imageLink: write,
+      imageLink: "https://tanvirmehedi.github.io/react-portfolio-live/main4.png",
       projects: [
         {
           title: "Project 6",
