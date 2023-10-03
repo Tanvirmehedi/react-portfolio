@@ -16,62 +16,44 @@ export const Work = () => {
       projects: [],
     },
     {
-      category: "App Development",
+      category: "Vanila JavaScript",
       projects: [
         {
           title: "E-commerce Website",
           description:
             "Built a Node.js-based e-commerce website with features like shopping cart and user authentication.",
-          tags: "Node.js",
-          githubLink: "https://github.com/yourusername/ecommerce-node",
-          imageLink:
-            "https://tanvirmehedi.github.io/react-portfolio-live/main.png",
-        },
-        {
-          title: "Weather App",
-          description:
-            "Developed a JavaScript weather app using APIs to display weather information.",
-          tags: "Javascript",
-          githubLink: "https://github.com/yourusername/weather-app-js",
+          tags: "JavaScript",
+          githubLink: "https://github.com/Tanvirmehedi/pageone-fashion",
           imageLink:
             "https://tanvirmehedi.github.io/react-portfolio-live/main.png",
         },
       ],
     },
     {
-      category: "Web Development",
+      category: "FrontEnd",
       projects: [
         {
-          title: "Portfolio Website",
+          title: "Solution_gateways_protfolio",
           description:
             "Created a responsive portfolio website using HTML, CSS, and JavaScript.",
           tags: "HTML, CSS, JavaScript",
-          githubLink: "https://github.com/yourusername/portfolio-website",
+          githubLink: "https://github.com/Tanvirmehedi/Solution_gateways_protfolio",
           imageLink:
             "https://tanvirmehedi.github.io/react-portfolio-live/main2.png",
         },
       ],
     },
     {
-      category: "Design",
+      category: "BackEnd",
       projects: [
         {
-          title: "UI/UX Redesign",
+          title: "ChatGPT bot using OpenAI API",
           description:
-            "Redesigned the user interface and user experience for an existing web application using Next.js.",
-          tags: "Next.js, UI/UX",
-          githubLink: "https://github.com/yourusername/ui-ux-redesign",
+            "Created a Node.js ChatGPT bot using OpenAI API. Maintained conversation history for context, enabling more natural and relevant interactions. Users can chat with the bot and exit by typing 'exit'. Enhancements like global npm package or Electron app possible.",
+          tags: "Node.js ,ChatGPT",
+          githubLink: "https://github.com/Tanvirmehedi/node-chatbot",
           imageLink:
-            "https://tanvirmehedi.github.io/react-portfolio-live/main3.png",
-        },
-        {
-          title: "Personal Blog",
-          description:
-            "Designed and developed a personal blog using React.js for content management.",
-          tags: "React.js, Blogging",
-          githubLink: "https://github.com/yourusername/personal-blog-react",
-          imageLink:
-            "https://tanvirmehedi.github.io/react-portfolio-live/main3.png",
+            "https://www.kommunicate.io/blog/wp-content/uploads/2022/09/Cover-Images-for-Blogs-.png",
         },
       ],
     },
@@ -79,13 +61,13 @@ export const Work = () => {
       category: "Mentorship",
       projects: [
         {
-          title: "Coding Bootcamp",
+          title: "leedCode-problem-solving",
           description:
-            "Mentored students in a coding bootcamp, teaching web development with Express.js.",
-          tags: "Express.js, Mentorship",
-          githubLink: "https://github.com/yourusername/coding-bootcamp",
+            "Master JavaScript problem-solving on LeetCode with practical tips, solutions, and examples in this comprehensive Bangla guide. Enhance your JavaScript skills and problem-solving abilities.",
+          tags: "Problem-solving, JavaScript",
+          githubLink: "https://github.com/Tanvirmehedi/leedCode-problem-solving",
           imageLink:
-            "https://tanvirmehedi.github.io/react-portfolio-live/main4.png",
+            "https://camo.githubusercontent.com/2b2ef9c241c0b5416d60233f53bd6c8a472848142516595c5203231589588c42/68747470733a2f2f63646e2e686173686e6f64652e636f6d2f7265732f686173686e6f64652f696d6167652f75706c6f61642f76313639343339373032373030302f61616435316139352d343030662d346361302d396231392d3363353161393262643037362e6a7065673f773d3136303026683d383430266669743d63726f702663726f703d656e74726f7079266175746f3d636f6d70726573732c666f726d617426666f726d61743d77656270",
         },
       ],
     },
