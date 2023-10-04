@@ -39,7 +39,7 @@ export const Work = () => {
           tags: "HTML, CSS, JavaScript",
           githubLink: "https://github.com/Tanvirmehedi/Solution_gateways_protfolio",
           imageLink:
-            "https://tanvirmehedi.github.io/react-portfolio-live/main2.png",
+            "https://www.interviewbit.com/blog/wp-content/uploads/2022/05/image1.png",
         },
       ],
     },
