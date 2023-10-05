@@ -93,7 +93,7 @@ export const Work = () => {
   return (
     <div className="transition-all">
       <ShareHeader pageTitle={"Portfolio"} />
-      <ul className="grid grid-flow-row-dense gap-4 py-5 sm:grid-flow-col-dense md:grid-flow-col-dense lg:grid-flow-col-dense  lg:justify-items-end ">
+      <ul className="grid grid-flow-row-dense gap-4 py-5 md:grid-cols-1 sm:grid-flow-col-dense md:grid-flow-col-dense lg:grid-flow-col-dense lg:justify-items-end ">
         {projectItems.map((item, index) => (
           <li
             onClick={() => handler(item.category)}
@@ -108,7 +108,7 @@ export const Work = () => {
           </li>
         ))}
       </ul>
-      <div className="grid grid-flow-row-dense gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+      <div className="grid grid-flow-row-dense gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
         {isActive === "All"
           ? projectItems.map((item) => {
               return item.projects.map((project, index) => (

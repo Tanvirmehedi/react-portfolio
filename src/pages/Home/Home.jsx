@@ -49,7 +49,7 @@ export const Home = () => {
       </p>
       <h2 className="text-start font-bold text-lg pb-5">What I Do!</h2>
 
-      <div className="services-box grid lg:grid-cols-2 gap-3">
+      <div className="services-box grid md:grid-cols-1 lg:grid-cols-2 gap-3">
         {servicesData.map((item,index)=><HomeService title={item.title} key={index} text={item.text} icon={item.icon} servicesBg={item.bgColor} iconColor={item.iconColor}/>)}
       </div>
     </div>

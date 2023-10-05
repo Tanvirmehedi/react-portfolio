@@ -9,7 +9,7 @@ import { Contact } from "../pages/Contact/Contact";
 
 export function ShareBox() {
   return (
-    <div className="my-3 lg:my-0 bg-white rounded-md py-6 px-3 lg:px-20 h-fit">
+    <div className="my-3 md:my-0 bg-white rounded-md py-6 px-3 md:px-20 h-fit">
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/resume" element={<Resume />} />

@@ -3,7 +3,7 @@
 export const ContactForm = () => {
   const submitHndler = (e) => {
     e.preventDefault();
-    alert("We Are Working On This!")
+    console.log("We Are Working On This!")
   };
 
   return (

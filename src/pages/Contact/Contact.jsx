@@ -35,7 +35,7 @@ export const Contact = () => {
   return (
     <div className="transition-all">
       <ShareHeader pageTitle={"Contact"} />
-      <div className="flex flex-col gap-4 md:flex-row lg:flex-row my-6">
+      <div className="flex flex-col gap-4 lg:flex-row my-6">
        {contactInfo.map((item,index)=><ContactInfo key={index} contacts = {item}/>)}
       </div>
       <div>

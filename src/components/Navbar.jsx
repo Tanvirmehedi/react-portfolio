@@ -29,7 +29,7 @@ export function Navbar() {
   ];
 
   return (
-    <div className="flex justify-evenly lg:justify-end mb-3">
+    <div className="flex justify-evenly md:justify-end mb-3">
       <div className="bg-[#F2F7FC] rounded-md border shadow-inner flex flex-wrap justify-evenly gap-2 px-5 lg:gap-1 lg:w-1/2 ">
         {navButtonData.map((item, index) => (
           <NavButton
