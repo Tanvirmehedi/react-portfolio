@@ -14,12 +14,20 @@ export function NameCard() {
           alt="profile-img"
         />
       </div>
-      <div className="profile-name text-2xl font-semibold">
+      <motion.div
+        className="profile-name text-2xl font-semibold"
+        animate={{ x: [100, 0, 3] }}
+        transition={{ ease: "easeIn", duration: 1 }}
+      >
         H M Tanvir Mehedi
-      </div>
-      <div className="profile-designation font-thin text-sm text-gray-400">
+      </motion.div>
+      <motion.div
+        className="profile-designation font-thin text-sm text-gray-400"
+        animate={{ x: [-100, 0, 0] }}
+        transition={{ ease: "easeIn", duration: 1.5 }}
+      >
         FullStack Developer
-      </div>
+      </motion.div>
     </div>
   );
 }
