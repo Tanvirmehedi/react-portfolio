@@ -3,7 +3,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ShareHeader } from "../../components/ShareHeader";
 import { EducationExperience } from "./EducationExperience";
-import { faBolt, faGraduationCap, faNetworkWired, faTrophy } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import {
+  faBolt,
+  faGraduationCap,
+  faNetworkWired,
+  faTrophy,
+} from "@fortawesome/free-solid-svg-icons";
 import { SkillServices } from "./SkillServices";
 
 export const Resume = () => {
@@ -50,7 +56,9 @@ export const Resume = () => {
   const skills = [
     {
       category: "Work Skills",
-      icon: <FontAwesomeIcon className="text-[#f7c142]" icon={faNetworkWired} />,
+      icon: (
+        <FontAwesomeIcon className="text-[#f7c142]" icon={faNetworkWired} />
+      ),
       list: [
         "Node.js",
         "Mongo DB",
@@ -65,16 +73,18 @@ export const Resume = () => {
     {
       category: "Soft Skills",
       icon: <FontAwesomeIcon className="text-[#f79342]" icon={faBolt} />,
-      list: [
-        "Time Management",
-        "Research",
-        "Writing",
-      ],
+      list: ["Time Management", "Research", "Writing"],
     },
   ];
 
   return (
-    <div className="transition-all">
+    <motion.div className="transition-all opacity-0"
+    animate={{ opacity: 1 }}
+    transition={{
+      ease: "linear",
+      duration: 1,
+    }}
+    >
       <ShareHeader pageTitle={"Resume"} />
       <div className="resume-page-area py-5">
         <div className="education-section flex flex-col lg:flex-row gap-2 justify-stretch ">
@@ -90,6 +100,6 @@ export const Resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

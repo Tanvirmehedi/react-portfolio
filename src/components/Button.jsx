@@ -5,7 +5,7 @@ export function Button({ href, icon, text }) {
     <motion.div
       className="resume mt-6 m-auto flex flex-row justify-center items-center"
       animate={{ x: [-500, 0, 0] }}
-      transition={{ ease: "circIn", duration: 1, delay: 3 }}
+      transition={{ ease: "circIn", duration: 1, delay: 3}}
     >
       <a href={href} target="_blank" rel="noopener noreferrer">
         <motion.button

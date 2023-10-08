@@ -8,6 +8,7 @@ import {
   faEnvelope,
   faMobileScreenButton,
 } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const contactInfo = [
@@ -20,27 +21,36 @@ export const Contact = () => {
       ),
       iconText: "Phone:",
       contactText: "+8801715422885",
-      bgColor:"from-[#E6E6E6]/50 to-[#FF9C1B]/50"
+      bgColor: "from-[#E6E6E6]/50 to-[#FF9C1B]/50",
     },
     {
       contactIcon: (
         <FontAwesomeIcon className="text-[#FF9C1B]" icon={faEnvelope} />
-        ),
-        iconText: "Email:",
-        contactText: "dev1tanvir@gmail.com",
-        bgColor:"from-[#FF9C1B]/50 to-[#E6E6E6]/50"
+      ),
+      iconText: "Email:",
+      contactText: "dev1tanvir@gmail.com",
+      bgColor: "from-[#FF9C1B]/50 to-[#E6E6E6]/50",
     },
   ];
 
   return (
-    <div className="transition-all">
+    <motion.div
+      className="transition-all opacity-0"
+      animate={{ opacity: 1 }}
+      transition={{
+        ease: "linear",
+        duration: 1,
+      }}
+    >
       <ShareHeader pageTitle={"Contact"} />
       <div className="flex flex-col gap-4 lg:flex-row my-6">
-       {contactInfo.map((item,index)=><ContactInfo key={index} contacts = {item}/>)}
+        {contactInfo.map((item, index) => (
+          <ContactInfo key={index} contacts={item} />
+        ))}
       </div>
       <div>
         <ContactForm />
       </div>
-    </div>
+    </motion.div>
   );
 };

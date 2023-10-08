@@ -8,6 +8,7 @@ import blog from "../../assets/Rectangle 20.png";
 import app from "../../assets/Rectangle 21.png";
 import code from "../../assets/Rectangle 22.png";
 import write from "../../assets/Rectangle 24.png";
+import { motion } from "framer-motion";
 
 export const Work = () => {
   const projectItems = [
@@ -37,7 +38,8 @@ export const Work = () => {
           description:
             "Created a responsive portfolio website using HTML, CSS, and JavaScript.",
           tags: "HTML, CSS, JavaScript",
-          githubLink: "https://github.com/Tanvirmehedi/Solution_gateways_protfolio",
+          githubLink:
+            "https://github.com/Tanvirmehedi/Solution_gateways_protfolio",
           imageLink:
             "https://www.interviewbit.com/blog/wp-content/uploads/2022/05/image1.png",
         },
@@ -65,7 +67,8 @@ export const Work = () => {
           description:
             "Master JavaScript problem-solving on LeetCode with practical tips, solutions, and examples in this comprehensive Bangla guide. Enhance your JavaScript skills and problem-solving abilities.",
           tags: "Problem-solving, JavaScript",
-          githubLink: "https://github.com/Tanvirmehedi/leedCode-problem-solving",
+          githubLink:
+            "https://github.com/Tanvirmehedi/leedCode-problem-solving",
           imageLink:
             "https://camo.githubusercontent.com/2b2ef9c241c0b5416d60233f53bd6c8a472848142516595c5203231589588c42/68747470733a2f2f63646e2e686173686e6f64652e636f6d2f7265732f686173686e6f64652f696d6167652f75706c6f61642f76313639343339373032373030302f61616435316139352d343030662d346361302d396231392d3363353161393262643037362e6a7065673f773d3136303026683d383430266669743d63726f702663726f703d656e74726f7079266175746f3d636f6d70726573732c666f726d617426666f726d61743d77656270",
         },
@@ -91,7 +94,14 @@ export const Work = () => {
   const data = filterData();
 
   return (
-    <div className="transition-all">
+    <motion.div
+      className="transition-all opacity-0"
+      animate={{ opacity: 1 }}
+      transition={{
+        ease: "linear",
+        duration: 1,
+      }}
+    >
       <ShareHeader pageTitle={"Portfolio"} />
       <ul className="grid grid-flow-row-dense gap-4 py-5 md:grid-cols-1 sm:grid-flow-col-dense md:grid-flow-col-dense lg:grid-flow-col-dense lg:justify-items-end ">
         {projectItems.map((item, index) => (
@@ -129,6 +139,6 @@ export const Work = () => {
               ));
             })}
       </div>
-    </div>
+    </motion.div>
   );
 };
