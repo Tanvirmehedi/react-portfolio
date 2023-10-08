@@ -7,8 +7,8 @@ export function NameCard() {
     <div className="name-card flex flex-col justify-center items-center gap-2">
       <div className="profile-image rounded-lg w-32 h-32 overflow-hidden -mt-16 md:-mt-24">
         <motion.img
-          animate={{ x: [-100, 0, 0] }}
-          transition={{ ease: "easeInOut", duration: 1.5 }}
+          animate={{ x: [-130, 0, 0] }}
+          transition={{ ease: "easeInOut", duration: 1, delay: 1 }}
           className="max-h-fit"
           src="https://tanvirmehedi.github.io/react-portfolio-live/main.jpg"
           alt="profile-img"
@@ -17,14 +17,14 @@ export function NameCard() {
       <motion.div
         className="profile-name text-2xl font-semibold"
         animate={{ x: [100, 0, 3] }}
-        transition={{ ease: "easeIn", duration: 1 }}
+        transition={{ ease: "circIn", duration: 1, delay: 1 }}
       >
         H M Tanvir Mehedi
       </motion.div>
       <motion.div
         className="profile-designation font-thin text-sm text-gray-400"
         animate={{ x: [-100, 0, 0] }}
-        transition={{ ease: "easeIn", duration: 1.5 }}
+        transition={{ ease: "easeIn", duration: 1.5, delay: 1 }}
       >
         FullStack Developer
       </motion.div>

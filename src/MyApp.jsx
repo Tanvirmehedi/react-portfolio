@@ -3,6 +3,7 @@
 import { AboutSection } from "./components/AboutSection";
 import { ProfileDetails } from "./components/ProfileDetails";
 import { motion } from "framer-motion";
+
 export function MyApp() {
   return (
     <div>

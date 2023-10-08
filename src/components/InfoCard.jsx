@@ -3,24 +3,34 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "./Button";
 import { InfoDetails } from "./InfoDetails";
-import { faEnvelope, faFileExport, faLocationDot, faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faFileExport,
+  faLocationDot,
+  faMobileScreenButton,
+} from "@fortawesome/free-solid-svg-icons";
 
 export function InfoCard() {
   const infoDetailsData = [
     {
       infoName: "Phone",
       infoData: "+8801715422885",
-      icon: <FontAwesomeIcon className="text-[#1BBAD6]" icon={faMobileScreenButton} />,
+      icon: (
+        <FontAwesomeIcon
+          className="text-[#1BBAD6]"
+          icon={faMobileScreenButton}
+        />
+      ),
     },
     {
       infoName: "Email",
       infoData: "dev1tanvir@gmail.com",
-      icon:<FontAwesomeIcon className="text-[#FF9C1B]" icon={faEnvelope} />,
+      icon: <FontAwesomeIcon className="text-[#FF9C1B]" icon={faEnvelope} />,
     },
     {
       infoName: "Location",
       infoData: "Dhaka, Bangladesh",
-      icon:<FontAwesomeIcon className="text-[#1BBAD6]" icon={faLocationDot} /> ,
+      icon: <FontAwesomeIcon className="text-[#1BBAD6]" icon={faLocationDot} />,
     },
   ];
 

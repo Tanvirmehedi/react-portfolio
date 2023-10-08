@@ -2,7 +2,11 @@
 import { motion } from "framer-motion";
 export function Button({ href, icon, text }) {
   return (
-    <div className="resume mt-6 m-auto flex flex-row justify-center items-center">
+    <motion.div
+      className="resume mt-6 m-auto flex flex-row justify-center items-center"
+      animate={{ x: [-500, 0, 0] }}
+      transition={{ ease: "circIn", duration: 1, delay: 3 }}
+    >
       <a href={href} target="_blank" rel="noopener noreferrer">
         <motion.button
           className="resume-btn hover:animate-pulse rounded-full cursor-pointer p-3 text-xl flex flex-row gap-x-2 justify-center items-center bg-gradient-to-r from-[#1BBAD6] to-[#FFCE42] text-white"
@@ -15,6 +19,6 @@ export function Button({ href, icon, text }) {
           </div>
         </motion.button>
       </a>
-    </div>
+    </motion.div>
   );
 }
